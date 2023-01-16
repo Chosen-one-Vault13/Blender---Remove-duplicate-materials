@@ -7,3 +7,4 @@ IMPORTANT: -Make sure you have backups of your Blender file in case a material i
            -The add-on does affect Worlds, only Materials.
   
  
+.
