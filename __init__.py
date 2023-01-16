@@ -1,6 +1,6 @@
 bl_info = {
     "name": "Remove Duplicate Materials",
-    "author": "Your Name",
+    "author": "Gustavo Alcarde - AI",
     "version": (1, 0, 0),
     "blender": (2, 80, 0),
     "location": "View3D > Tools > Remove Duplicate Materials",
