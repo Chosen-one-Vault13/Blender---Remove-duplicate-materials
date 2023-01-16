@@ -1,3 +1,6 @@
+import bpy
+from .main_script import register, unregiste
+
 bl_info = {
     "name": "Remove Duplicate Materials",
     "author": "Gustavo Alcarde - AI",
