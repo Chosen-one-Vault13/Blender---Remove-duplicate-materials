@@ -8,20 +8,13 @@ bl_info = {
     "category": "Material",
 }
 
-import bpy
-from .remove_duplicate_materials import RemoveDuplicateMaterials
-
-classes = (
-    RemoveDuplicateMaterials,
-)
-
 def register():
-    for cls in classes:
-        bpy.utils.register_class(cls)
+    bpy.utils.register_class(RemoveDuplicateMaterialsButton)
+    bpy.utils.register_class(RemoveDuplicateMaterials)
 
 def unregister():
-    for cls in classes:
-        bpy.utils.unregister_class(cls)
+    bpy.utils.unregister_class(RemoveDuplicateMaterialsButton)
+    bpy.utils.unregister_class(RemoveDuplicateMaterials)
 
 if __name__ == "__main__":
     register()
