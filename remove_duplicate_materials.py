@@ -33,14 +33,24 @@ class RemoveDuplicateMaterials(bpy.types.Operator):
     def execute(self, context):
         remap_materials()
         return {'FINISHED'}
-    
-    def invoke(self, context, event):
-        return self.execute(context)
+
+class RemoveDuplicateMaterialsButton(bpy.types.Panel):
+    bl_label = "Remove Duplicate Materials"
+    bl_idname = "VIEW3D_PT_remove_duplicate_materials"
+    bl_space_type = "VIEW_3D"
+    bl_region_type = "UI"
+    bl_category = "Tool"
+   
+    def draw(self, context):
+        layout = self.layout
+        layout.operator("material.remove_duplicate_materials", text="Remove Duplicate Materials")
 
 def register():
+    bpy.utils.register_class(RemoveDuplicateMaterialsButton)
     bpy.utils.register_class(RemoveDuplicateMaterials)
 
 def unregister():
+    bpy.utils.unregister_class(RemoveDuplicateMaterialsButton)
     bpy.utils.unregister_class(RemoveDuplicateMaterials)
 
 if __name__ == "__main__":
